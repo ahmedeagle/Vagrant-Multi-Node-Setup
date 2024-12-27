@@ -14,7 +14,7 @@ Getting Started
 1. Clone the Repository
 bash
 Copy code
-git clone https://github.com/your-username/vagrant-multi-node-setup.git
+git clone https://github.com/ahmedeagle/vagrant-multi-node-setup.git
 cd vagrant-multi-node-setup
 2. Update the Vagrantfile (Optional)
 Edit the Vagrantfile to customize:
@@ -24,21 +24,17 @@ CPU and memory allocation
 3. Start the VMs
 To bring up all VMs:
 
-bash
-Copy code
+
 vagrant up
 To bring up a specific node:
 
-bash
-Copy code
+
 vagrant up node1
 4. Check VM Status
-bash
-Copy code
+
 vagrant status
 5. SSH into a Node
-bash
-Copy code
+
 vagrant ssh node1
 Node Configuration
 The Vagrantfile defines the following nodes:
@@ -58,8 +54,7 @@ CPUs: 1
 Adding More Nodes
 To add more nodes, edit the Vagrantfile and define additional nodes using the same structure. Example:
 
-ruby
-Copy code
+
 config.vm.define "node4" do |node4|
   node4.vm.box = "ubuntu/bionic64"
   node4.vm.network "private_network", ip: "192.168.56.104"
@@ -70,24 +65,18 @@ config.vm.define "node4" do |node4|
 end
 Then start the new node:
 
-bash
-Copy code
+
 vagrant up node4
 Stopping and Destroying Nodes
 Stop all nodes:
-bash
-Copy code
+
 vagrant halt
 Stop a specific node:
-bash
-Copy code
+
 vagrant halt node1
 Destroy all nodes:
-bash
-Copy code
+
 vagrant destroy
 Destroy a specific node:
-bash
-Copy code
+
 vagrant destroy node1
-License
