@@ -1,6 +1,4 @@
 
-Here’s a sample README.md file for your Vagrant project that you can use for GitHub:
-
 Vagrant Multi-Node Setup
 This repository contains a Vagrant configuration to create and manage multiple virtual machines (VMs) for development or testing purposes. The setup is based on ubuntu/bionic64 boxes with private networking.
 
